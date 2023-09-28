@@ -1,0 +1,158 @@
+.homeMain{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+}
+.homeCard1{
+    width: 90%;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.85);
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding-bottom: 3vw;
+    
+}
+
+.HC1DM{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1vw;
+    gap: 2vw;
+
+}
+.selectProject{
+  width: 20%;
+  margin-left: 10%;
+  padding: 1vw;
+  border-radius: 10px;
+  border: 1px solid #b0aeae;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.85);
+  text-decoration: none;
+
+}
+.headInput{
+    width: 40%;
+    margin: auto;
+    padding: 1vw;
+    border-radius: 10px;
+    border: 1px solid #b0aeae;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.85);
+    text-decoration: none;
+    
+}
+
+.dateContainer{
+    width: 40%;
+    margin: auto;
+    padding: 1vw 2vw 1vw 0vw;
+   
+    position: relative;
+   
+}
+.headInputDate{
+    width: 100%;
+   
+    padding: 1vw;
+    border-radius: 10px;
+    border: 1px solid #b0aeae;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.85);
+    
+}
+.dateSpan{
+    position: absolute;
+    top: 17%;
+    left: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    background-color: white;
+    font-size: 0.8em;
+    
+}
+.headInput:focus,
+.headInputDate:focus {
+  outline: none; 
+}
+
+/* card2 */
+.homeCard2{
+    width: 90%;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.85);
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 10px;
+    text-align: left;
+    padding-bottom: 50px;
+    
+}
+.HC2h5{
+    margin-left: 4%;
+}
+.HCTMain{
+    width: 90%;
+    margin-left: 4%;
+    overflow: auto;
+    max-height: 150px;
+}
+.GCTable input:focus,
+.headInputDate:focus {
+  outline: none; 
+}
+.GCTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  .GCTable select {
+    width: 100%;
+   
+  }
+  
+  .GCTable  th, .GCTable td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .GCTable  th {
+    background-color: #f0f0f0;
+  }
+  .sLnum {
+  
+    -moz-appearance: textfield;
+    
+    -webkit-appearance: none;
+  }
+.LastButtons{
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+}
+  .submitButton{
+    margin-top: 5vw;
+    color: green;
+    background-color: rgb(166, 217, 243);
+    border: none;
+    padding: 5px 15px;
+    font-size: 20px;
+    margin-bottom: 2vw;
+  }
+  .addRow{
+    width: fit-content;
+    margin-left: 4%;
+    margin-top: 2vw;
+  }
+  .newProjectButton{
+    margin-top: 5vw;
+    color: rgba(212, 75, 6, 0.975);
+    background-color: rgb(166, 217, 243);
+    border: none;
+    padding: 5px 15px;
+    font-size: 20px;
+    width: fit-content;
+    margin: auto;
+
+  }
