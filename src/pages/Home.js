@@ -365,7 +365,7 @@ function Home() {
                         return (
                     <tr key={index}>
                     <td>
-                        {editableRows[index] ?( // Otherwise, render checkbox
+                        {editableRows[index] ?( 
                           <input
                             type="checkbox"
                             checked={checkedCheckboxes[index]}
