@@ -131,13 +131,15 @@ function Home() {
               
             })
             if(iTransIdSelected === 0){
-              setFormData({
-                project: '',
-                projectDetails: '',
-                location: '',
-                date: '',
-                observations: [{}],
-              });
+
+            const response = await axios.get("http://103.120.178.195/HSEAPI/Ray/GetHSESummary?UserId=12345");
+            const resultDataArray = JSON.parse(response.data.ResultData);
+            const iTransIds = resultDataArray.map(item => item.iTransId);
+            setiTransIdList(iTransIds)
+            setiTransIdSelected(iTransIds[0])
+            setprojecExist(true)
+
+            setEditableRows(Array(formData.observations.length).fill(false))
               
 
             }
