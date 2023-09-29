@@ -156,3 +156,15 @@
     margin: auto;
 
   }
+  .buttonsDiv{
+    display: flex;
+    flex-direction: row;
+  }
+  #editIcon{
+    color: rgb(116, 203, 243);
+    font-size: medium;
+  }
+  #deleteIcon{
+    color: red;
+    font-size: medium;
+  }

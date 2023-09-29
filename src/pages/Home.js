@@ -2,6 +2,9 @@ import React,{ useEffect, useState } from 'react'
 import './home.css'
 import axios from 'axios';  
 import { toast } from 'react-toastify';
+import EditIcon from '@mui/icons-material/Edit';
+import IconButton from '@mui/material/IconButton';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 function Home() {
 
@@ -299,6 +302,15 @@ function Home() {
     updatedEditableRows[index] = true;
     setEditableRows(updatedEditableRows);
   };
+  const handleDeleteButtonClick = (index) => {
+    const updatedObservations = formData.observations.filter(
+      (_, i) => i !== index
+    );
+    setFormData({
+      ...formData,
+      observations: updatedObservations,
+    });
+  };
   
 
     
@@ -371,8 +383,9 @@ function Home() {
                             checked={checkedCheckboxes[index]}
                             onChange={() => handleCheckboxChange(index)}
                           />
-                        ) :( 
-                          <button onClick={() => handleEditButtonClick(index)}>Edit</button>
+                        ) :( <div className='buttonsDiv'>
+                          <IconButton onClick={() => handleEditButtonClick(index)}><EditIcon id='editIcon'/></IconButton>
+                          <IconButton onClick={() => handleDeleteButtonClick(index)}><DeleteIcon id='deleteIcon'/></IconButton></div>
                         )  }
                       </td>
                     <td style={{textAlign: 'center'}}> {index+1}</td>
