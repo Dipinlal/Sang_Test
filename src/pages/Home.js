@@ -130,20 +130,27 @@ function Home() {
               type: 'success',
               
             })
-            setFormData({
-              project: '',
-              projectDetails: '',
-              location: '',
-              date: '',
-              observations: [{}],
-            });
-            setiTransIdSelected(0)
+            if(iTransIdSelected === 0){
+              setFormData({
+                project: '',
+                projectDetails: '',
+                location: '',
+                date: '',
+                observations: [{}],
+              });
+              
+
+            }
+            else{
+              setEditableRows(Array(formData.observations.length).fill(false))
+            }
+            
             setformSubmitted(true)
             
           } catch (error) {
             
             console.error('Error submitting form:', error);
-            toast('Verfiy form Data', {
+            toast('Fill all fields', {
               position: toast.POSITION.BOTTOM_CENTER,
               type: 'error',
               
@@ -288,7 +295,7 @@ function Home() {
       date: '',
       observations: [{}],
     });
-    setprojecExist(false)
+    // setprojecExist(false)
     setiTransIdSelected(0)
     const updatedEditableRows = [...editableRows];
     updatedEditableRows[0] = true;
@@ -336,7 +343,7 @@ function Home() {
         
         <div className='HC1DM'>
           
-        <input className='headInput' placeholder='Project' type={projecExist?"text":'number'} name='project' value={formData.project} onChange={handleInputChange}/>
+        <input className='headInput' placeholder='Project' type='number' name='project' value={formData.project} onChange={handleInputChange}/>
         <input className='headInput' placeholder='Project Details' name='projectDetails'value={formData.projectDetails} onChange={handleInputChange}/>
         <input className='headInput' placeholder='Location' name='location'value={formData.location} onChange={handleInputChange}/>
         <div className='dateContainer' >

@@ -132,7 +132,7 @@
   justify-content: center;
 }
   .submitButton{
-    margin-top: 5vw;
+    margin-top: 2vw;
     color: green;
     background-color: rgb(166, 217, 243);
     border: none;
@@ -146,7 +146,7 @@
     margin-top: 2vw;
   }
   .newProjectButton{
-    margin-top: 5vw;
+    margin-top: 1vw;
     color: rgba(212, 75, 6, 0.975);
     background-color: rgb(166, 217, 243);
     border: none;
