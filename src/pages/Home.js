@@ -270,7 +270,7 @@ function Home() {
             ActionReq:observation.sActionReq,
             ActionBy:observation.iActionBy,
             TargetDate:formatDate(observation.TargetDate),
-            empCode:observation.iTransDtId
+            empCode:observation.sActionBy_Code
           }));
     
     setFormData({
